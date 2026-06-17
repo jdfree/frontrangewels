@@ -10,9 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --maroon: #8C1D40;
-      --maroon-dark: #6B1530;
-      --maroon-light: #A32A52;
+      --maroon: #990000;
+      --maroon-dark: #770000;
+      --maroon-light: #B30000;
       --gold: #C4A35A;
       --dark: #2D2D2D;
       --gray: #F5F5F5;
@@ -107,6 +107,34 @@
 
     nav a:hover {
       background: var(--maroon-dark);
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: var(--maroon);
+      list-style: none;
+      min-width: 280px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 100;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu a {
+      padding: 12px 24px;
+      font-size: 0.85rem;
+      text-transform: none;
+      letter-spacing: 0;
+      white-space: nowrap;
     }
 
     /* Hero */
@@ -403,15 +431,6 @@
 </head>
 <body>
 
-  <!-- Utility bar -->
-  <div class="utility-bar">
-    <a href="https://wels.net" target="_blank" rel="noopener">WELS.net</a>
-    <a href="https://wels.net/about-wels/what-we-believe/" target="_blank" rel="noopener">What We Believe</a>
-    <a href="https://wels.net/serving-you/" target="_blank" rel="noopener">Serving You</a>
-    <a href="#find">Find a Church</a>
-    <a href="#contact">Contact</a>
-  </div>
-
   <!-- Header -->
   <header>
     <div class="header-inner">
@@ -425,8 +444,15 @@
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#find">Find a Church</a></li>
-      <li><a href="#churches">Our Churches</a></li>
-      <li><a href="https://wels.net/about-wels/what-we-believe/" target="_blank" rel="noopener">What We Believe</a></li>
+      <li><a href="https://www.rmlhs.net/" target="_blank" rel="noopener">Our High School</a></li>
+      <li class="dropdown">
+        <a href="#">Events</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Area Reformation Service</a></li>
+          <li><a href="softball.html">Front Range Softball Tournament</a></li>
+          <li><a href="#">Front Range Pickleball Tournament</a></li>
+        </ul>
+      </li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -446,30 +472,9 @@
       <h2 class="section-title">Who We Are</h2>
       <div class="section-rule"></div>
       <p>The Front Range WELS churches are congregations of the Wisconsin Evangelical Lutheran Synod located along Colorado's Front Range. We are united by a shared confession of faith rooted in the Bible and the Lutheran Confessions.</p>
-      <p>WELS is a group of nearly 360,000 men, women, and children in nearly 1,300 congregations united by a common faith in Christ's saving love. Our Front Range congregations serve communities from Fort Collins to Colorado Springs, offering worship, Bible study, fellowship, and outreach.</p>
+      <p>WELS is a group of nearly 330,000 men, women, and children in nearly 1,200 congregations united by a common faith in Christ's saving love. Our Front Range congregations serve communities from Fort Collins to Colorado Springs, offering worship, Bible study, fellowship, and outreach.</p>
     </div>
   </section>
-
-  <!-- CTA Banner -->
-  <div class="cta-banner">
-    <div class="cta-grid">
-      <a href="#find" class="cta-item">
-        <span class="cta-icon">&#9769;</span>
-        <h3>Find a Church</h3>
-        <p>Locate a WELS congregation near you along Colorado's Front Range.</p>
-      </a>
-      <a href="https://wels.net/about-wels/what-we-believe/" target="_blank" rel="noopener" class="cta-item">
-        <span class="cta-icon">&#10013;</span>
-        <h3>What We Believe</h3>
-        <p>Learn about our confession of faith grounded in Scripture alone.</p>
-      </a>
-      <a href="https://wels.net/serving-you/" target="_blank" rel="noopener" class="cta-item">
-        <span class="cta-icon">&#10084;</span>
-        <h3>Get Connected</h3>
-        <p>Explore resources for spiritual growth, family life, and community.</p>
-      </a>
-    </div>
-  </div>
 
   <!-- Map Section -->
   <section id="find" class="map-section">
@@ -479,61 +484,13 @@
       <p>Use the interactive map below to find a WELS congregation near you along Colorado's Front Range.</p>
       <div class="map-container">
         <iframe
-          src="https://www.google.com/maps/d/u/0/embed?mid=1_AfV4BQSxlH49TDoiDfOWuyu65c&hl=en&ll=39.68007395315042%2C-104.7650312734375&z=9"
+          src="https://www.google.com/maps/d/u/0/embed?mid=1_AfV4BQSxlH49TDoiDfOWuyu65c&hl=en&ll=39.68007395315042%2C-104.7650312734375&z=8"
           allowfullscreen
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
           title="Front Range WELS Churches Map">
         </iframe>
       </div>
-    </div>
-  </section>
-
-  <!-- Churches listing -->
-  <section id="churches" class="churches">
-    <div class="section-inner">
-      <h2 class="section-title">Our Congregations</h2>
-      <div class="section-rule"></div>
-      <div class="church-grid">
-
-        <div class="church-card">
-          <h3>Abiding Love Lutheran Church</h3>
-          <p>Colorado Springs, CO</p>
-          <a href="https://wels.net/find-a-church/" target="_blank" rel="noopener">Learn more &rarr;</a>
-        </div>
-
-        <div class="church-card">
-          <h3>Beautiful Savior Lutheran Church</h3>
-          <p>Colorado Springs, CO</p>
-          <a href="https://wels.net/find-a-church/" target="_blank" rel="noopener">Learn more &rarr;</a>
-        </div>
-
-        <div class="church-card">
-          <h3>Cross of Christ Lutheran Church</h3>
-          <p>Littleton, CO</p>
-          <a href="https://wels.net/find-a-church/" target="_blank" rel="noopener">Learn more &rarr;</a>
-        </div>
-
-        <div class="church-card">
-          <h3>Shepherd of the Hills Lutheran Church</h3>
-          <p>Parker, CO</p>
-          <a href="https://wels.net/find-a-church/" target="_blank" rel="noopener">Learn more &rarr;</a>
-        </div>
-
-        <div class="church-card">
-          <h3>St. Paul's Lutheran Church</h3>
-          <p>Denver, CO</p>
-          <a href="https://wels.net/find-a-church/" target="_blank" rel="noopener">Learn more &rarr;</a>
-        </div>
-
-        <div class="church-card">
-          <h3>Trinity Lutheran Church</h3>
-          <p>Fort Collins, CO</p>
-          <a href="https://wels.net/find-a-church/" target="_blank" rel="noopener">Learn more &rarr;</a>
-        </div>
-
-      </div>
-      <p style="margin-top: 24px; font-size: 0.9rem; color: var(--text-light);"><em>This list is a starting point &mdash; please update with the actual congregations in your group.</em></p>
     </div>
   </section>
 
@@ -544,7 +501,6 @@
         <h4>Menu</h4>
         <a href="#about">About</a>
         <a href="#find">Find a Church</a>
-        <a href="#churches">Our Churches</a>
         <a href="#contact">Contact</a>
       </div>
       <div class="footer-col">
@@ -556,11 +512,7 @@
       </div>
       <div id="contact" class="footer-col">
         <h4>Contact</h4>
-        <p>
-          Front Range WELS<br>
-          Colorado's Front Range<br><br>
-          <a href="mailto:info@frontrangewels.com">info@frontrangewels.com</a>
-        </p>
+        <p>Coming Soon</p>
       </div>
     </div>
     <div class="footer-bottom">
