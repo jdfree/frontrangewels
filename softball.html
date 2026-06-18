@@ -527,7 +527,7 @@
       var el = document.getElementById('year-content');
       el.className = 'year-content loading';
       el.innerHTML = '<p>Loading&hellip;</p>';
-      fetch('softball/' + year + '.html')
+      fetch('softball/' + year + '.html', { cache: 'no-cache' })
         .then(function(r) {
           if (!r.ok) throw new Error('not found');
           return r.text();
