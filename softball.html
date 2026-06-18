@@ -147,7 +147,42 @@
 
     /* Year selector */
     .year-selector {
+      margin-bottom: 20px;
+    }
+
+    .tournament-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
       margin-bottom: 40px;
+    }
+
+    .rules-link {
+      color: var(--maroon);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    .rules-link:hover {
+      text-decoration: underline;
+    }
+
+    .survey-btn {
+      display: inline-block;
+      background: var(--maroon);
+      color: var(--white);
+      padding: 12px 28px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 3px;
+      transition: background 0.2s;
+    }
+
+    .survey-btn:hover {
+      background: var(--maroon-dark);
     }
 
     .year-selector label {
@@ -279,6 +314,15 @@
       font-weight: 600;
     }
 
+    .no-tournament {
+      background: var(--gray);
+      border-radius: 4px;
+      padding: 30px;
+      text-align: center;
+      color: var(--text-light);
+      font-size: 1.1rem;
+    }
+
     .photo-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -399,8 +443,9 @@
         <a href="#">Events</a>
         <ul class="dropdown-menu">
           <li><a href="#">Area Reformation Service</a></li>
-          <li><a href="softball.html">Front Range Softball Tournament</a></li>
-          <li><a href="#">Front Range Pickleball Tournament</a></li>
+          <li><a href="softball.html">Annual Softball Tournament</a></li>
+          <li><a href="#">Pickleball Tournament</a></li>
+          <li><a href="#">Band Fest</a></li>
         </ul>
       </li>
       <li><a href="index.html#contact">Contact</a></li>
@@ -432,7 +477,18 @@
         <option value="2012">2012</option>
         <option value="2011">2011</option>
         <option value="2010">2010</option>
+        <option value="2009">2009</option>
+        <option value="2008">2008</option>
+        <option value="2007">2007</option>
+        <option value="2006">2006</option>
+        <option value="2005">2005</option>
+        <option value="2004">2004</option>
       </select>
+    </div>
+
+    <div class="tournament-links">
+      <a class="rules-link" href="https://docs.google.com/document/d/1t-9-EUon_0GzJro_4X5Ol4FchTOh4U3CVJ4ggU5MDis/edit?usp=sharing" target="_blank" rel="noopener">Click here for tournament rules</a>
+      <a class="survey-btn" href="https://forms.gle/uwKyujNnrj47qjsF6" target="_blank" rel="noopener">Click here for feedback survey</a>
     </div>
 
     <div class="year-content loading" id="year-content">

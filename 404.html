@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found – Front Range WELS</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --maroon: #990000;
+      --maroon-dark: #770000;
+      --gold: #C4A35A;
+      --dark: #2D2D2D;
+      --gray: #F5F5F5;
+      --white: #FFFFFF;
+      --text: #333333;
+      --text-light: #666666;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', Arial, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      background: var(--white);
+      border-bottom: 3px solid var(--maroon);
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .site-title {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 1.8rem;
+      margin-bottom: 2px;
+    }
+
+    .site-title a {
+      color: var(--maroon);
+      text-decoration: none;
+    }
+
+    .site-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      font-weight: 400;
+    }
+
+    /* 404 content */
+    .error-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .error-code {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 6rem;
+      color: var(--maroon);
+      line-height: 1;
+    }
+
+    .error-rule {
+      width: 60px;
+      height: 3px;
+      background: var(--gold);
+      margin: 20px 0;
+    }
+
+    .error-content h1 {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 1.8rem;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .error-content p {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      max-width: 500px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--maroon);
+      color: var(--white);
+      padding: 14px 36px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 3px;
+      transition: background 0.2s;
+    }
+
+    .btn:hover {
+      background: var(--maroon-dark);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: #888;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+
+    footer a {
+      color: #aaa;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--white);
+    }
+
+    @media (max-width: 768px) {
+      .error-code {
+        font-size: 4rem;
+      }
+
+      .error-content h1 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <div class="site-title"><a href="/">Front Range WELS</a></div>
+      <div class="site-subtitle">Wisconsin Evangelical Lutheran Synod Churches in Colorado</div>
+    </div>
+  </header>
+
+  <!-- 404 Content -->
+  <div class="error-content">
+    <div class="error-code">404</div>
+    <div class="error-rule"></div>
+    <h1>Page Not Found</h1>
+    <p>Sorry, we couldn't find the page you were looking for. It may have been moved or no longer exists.</p>
+    <a href="/" class="btn">Return Home</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 Front Range WELS. All rights reserved. |
+    A ministry of the <a href="https://wels.net" target="_blank" rel="noopener">Wisconsin Evangelical Lutheran Synod</a>
+  </footer>
+
+</body>
+</html>
