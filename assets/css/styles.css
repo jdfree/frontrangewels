@@ -323,34 +323,70 @@ footer {
   margin-bottom: 12px;
 }
 
-/* Year selector + tournament links */
-.year-selector {
-  margin-bottom: 20px;
+/* Year index (list of tournament years on the softball landing page) */
+.year-index-hint {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 12px;
 }
 
-.year-selector label {
-  font-weight: 600;
-  font-size: 1rem;
-  margin-right: 10px;
+.year-index {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
 }
 
-.year-selector select {
-  font-family: 'Open Sans', Arial, sans-serif;
-  font-size: 1rem;
-  padding: 8px 16px;
-  border: 2px solid #ddd;
-  border-radius: 4px;
-  background: var(--white);
+.year-index thead th {
+  text-align: left;
+  padding: 10px 16px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: var(--text-light);
+  background: var(--gray);
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.year-index td {
+  padding: 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.year-index td a {
+  display: block;
+  padding: 14px 16px;
+  text-decoration: none;
   color: var(--text);
-  cursor: pointer;
-  transition: border-color 0.2s;
 }
 
-.year-selector select:focus {
-  outline: none;
-  border-color: var(--maroon);
+.year-index tr:hover td {
+  background: var(--gray);
 }
 
+.year-index .yr a {
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--maroon);
+}
+
+.year-index .champ.none a {
+  color: var(--text-light);
+  font-style: italic;
+}
+
+.back-link {
+  color: var(--maroon);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Tournament links (rules + feedback survey) */
 .tournament-links {
   display: flex;
   flex-wrap: wrap;
@@ -392,13 +428,6 @@ footer {
   padding: 0;
   color: var(--text);
   font-size: 1rem;
-}
-
-.year-content.loading {
-  background: var(--gray);
-  padding: 40px;
-  text-align: center;
-  color: var(--text-light);
 }
 
 /* Tournament content fragments */

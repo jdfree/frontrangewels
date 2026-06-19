@@ -16,17 +16,23 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-# The softball/<year>.html files are content fragments loaded via fetch(),
-# not standalone pages — keep them out of the sitemap.
+# Per-year tournament pages live in the _softball collection and render at
+# /softball/<year>.html.
+collections:
+  softball:
+    output: true
+    permalink: /softball/:name.html
+
 defaults:
   - scope:
       path: ""
     values:
       image: /assets/img/social-card.png
   - scope:
-      path: "softball"
+      path: ""
+      type: softball
     values:
-      sitemap: false
+      layout: softball_year
 
 exclude:
   - Gemfile

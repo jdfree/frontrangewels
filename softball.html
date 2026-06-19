@@ -2,76 +2,32 @@
 layout: default
 title: Annual Softball Tournament
 description: >-
-  Results, schedules, champions, and photos from the annual Front Range WELS
-  co-ed softball tournament, year by year from 2004 to today.
+  Champions, results, and schedules from the annual Front Range WELS co-ed
+  softball tournament, year by year from 2004 to today.
 ---
 
 <div class="page-content">
   <h1 class="page-title">Front Range Softball Tournament</h1>
   <div class="section-rule"></div>
 
-  <div class="year-selector">
-    <label for="year-select">Select Year:</label>
-    <select id="year-select">
-      <option value="2026" selected>2026</option>
-      <option value="2025">2025</option>
-      <option value="2024">2024</option>
-      <option value="2023">2023</option>
-      <option value="2022">2022</option>
-      <option value="2021">2021</option>
-      <option value="2020">2020</option>
-      <option value="2019">2019</option>
-      <option value="2018">2018</option>
-      <option value="2017">2017</option>
-      <option value="2016">2016</option>
-      <option value="2015">2015</option>
-      <option value="2014">2014</option>
-      <option value="2013">2013</option>
-      <option value="2012">2012</option>
-      <option value="2011">2011</option>
-      <option value="2010">2010</option>
-      <option value="2009">2009</option>
-      <option value="2008">2008</option>
-      <option value="2007">2007</option>
-      <option value="2006">2006</option>
-      <option value="2005">2005</option>
-      <option value="2004">2004</option>
-    </select>
-  </div>
+  {% include tournament-links.html %}
 
-  <div class="tournament-links">
-    <a class="rules-link" href="https://docs.google.com/document/d/1t-9-EUon_0GzJro_4X5Ol4FchTOh4U3CVJ4ggU5MDis/edit?usp=sharing" target="_blank" rel="noopener">Click here for tournament rules</a>
-    <a class="survey-btn" href="https://forms.gle/uwKyujNnrj47qjsF6" target="_blank" rel="noopener">Click here for feedback survey</a>
-  </div>
+  <p class="year-index-hint"><em>Click a year for tournament details.</em></p>
 
-  <div class="year-content loading" id="year-content">
-    <p>Loading&hellip;</p>
-  </div>
+  <table class="year-index">
+    <thead>
+      <tr><th>Year</th><th>Champion</th></tr>
+    </thead>
+    <tbody>
+      {% assign years = site.softball | sort: "year" | reverse %}
+      {% for y in years %}
+        <tr>
+          <td class="yr"><a href="{{ y.url | relative_url }}">{{ y.year }}</a></td>
+          <td class="champ{% unless y.champion %} none{% endunless %}">
+            <a href="{{ y.url | relative_url }}">{% if y.champion %}{{ y.champion }}{% else %}No Results{% endif %}</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 </div>
-
-<script>
-  function loadYear(year) {
-    var el = document.getElementById('year-content');
-    el.className = 'year-content loading';
-    el.innerHTML = '<p>Loading&hellip;</p>';
-    fetch('softball/' + year + '.html', { cache: 'no-cache' })
-      .then(function(r) {
-        if (!r.ok) throw new Error('not found');
-        return r.text();
-      })
-      .then(function(html) {
-        el.className = 'year-content';
-        el.innerHTML = html;
-      })
-      .catch(function() {
-        el.className = 'year-content loading';
-        el.innerHTML = '<p>Content for the <strong>' + year + '</strong> tournament coming soon.</p>';
-      });
-  }
-
-  document.getElementById('year-select').addEventListener('change', function() {
-    loadYear(this.value);
-  });
-
-  loadYear(document.getElementById('year-select').value);
-</script>
