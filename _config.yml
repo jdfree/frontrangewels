@@ -6,6 +6,12 @@ url: "https://www.frontrangewels.com"
 baseurl: ""
 lang: en_US
 
+# Default preview image for shared links (OpenGraph / Twitter cards).
+image: /assets/img/social-card.png
+twitter:
+  card: summary_large_image
+logo: /assets/img/social-card.png
+
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
@@ -13,6 +19,10 @@ plugins:
 # The softball/<year>.html files are content fragments loaded via fetch(),
 # not standalone pages — keep them out of the sitemap.
 defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/social-card.png
   - scope:
       path: "softball"
     values:
