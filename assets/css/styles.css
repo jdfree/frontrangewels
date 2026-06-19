@@ -323,6 +323,35 @@ footer {
   margin-bottom: 12px;
 }
 
+/* Event detail (e.g., pickleball) */
+.event-subtitle {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.3rem;
+  color: var(--maroon-light);
+  margin-bottom: 16px;
+}
+
+.event-photo {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  display: block;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin: 0 0 24px;
+}
+
+.event-text {
+  font-size: 1.1rem;
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+.event-text a {
+  color: var(--maroon);
+  font-weight: 600;
+}
+
 /* Year index (list of tournament years on the softball landing page) */
 .year-index-hint {
   color: var(--text-light);
