@@ -1,0 +1,26 @@
+title: Front Range WELS
+description: >-
+  WELS Lutheran churches along Colorado's Front Range — worship, locations,
+  events, and the annual Front Range softball tournament.
+url: "https://www.frontrangewels.com"
+baseurl: ""
+lang: en_US
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# The softball/<year>.html files are content fragments loaded via fetch(),
+# not standalone pages — keep them out of the sitemap.
+defaults:
+  - scope:
+      path: "softball"
+    values:
+      sitemap: false
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - .gitignore

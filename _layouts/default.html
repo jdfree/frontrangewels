@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {% seo %}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+
+  <!-- Structured data: the Front Range WELS organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Front Range WELS",
+    "alternateName": "Front Range WELS Churches",
+    "url": "{{ site.url }}{{ site.baseurl }}/",
+    "description": "A group of Wisconsin Evangelical Lutheran Synod (WELS) churches along Colorado's Front Range.",
+    "email": "frontrangewels@gmail.com",
+    "areaServed": {
+      "@type": "Place",
+      "name": "Front Range, Colorado"
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Wisconsin Evangelical Lutheran Synod",
+      "url": "https://wels.net"
+    }
+  }
+  </script>
+
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e0b85f211c2c4eada525d5de2899674b"}'></script>
+</head>
+<body>
+
+  {% include header.html %}
+
+  <main class="site-main">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+</body>
+</html>
