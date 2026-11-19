@@ -24,7 +24,7 @@ description: >-
         <tr>
           <td class="yr"><a href="{{ y.url | relative_url }}">{{ y.year }}</a></td>
           <td class="champ{% unless y.champion %} none{% endunless %}">
-            <a href="{{ y.url | relative_url }}">{% if y.champion %}{{ y.champion }}{% else %}No Results{% endif %}</a>
+            <a href="{{ y.url | relative_url }}">{% if y.champion %}{{ y.champion }}{% elsif y.upcoming %}Upcoming{% else %}No Results{% endif %}</a>
           </td>
         </tr>
       {% endfor %}
